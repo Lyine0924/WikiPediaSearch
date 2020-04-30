@@ -1,0 +1,740 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7763DF72243F3FC9342A2306 /* Pods_WikiPediaSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB70B1C500CFD752C526FA0 /* Pods_WikiPediaSearch.framework */; };
+		D27C4367ED31A4B5DD14E7CB /* Pods_WikiPediaSearch_WikiPediaSearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 174BF3E37AD26F0165B3C3BF /* Pods_WikiPediaSearch_WikiPediaSearchUITests.framework */; };
+		EE464885245AD5F800103C7E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE464884245AD5F800103C7E /* AppDelegate.swift */; };
+		EE464889245AD5F800103C7E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE464888245AD5F800103C7E /* ViewController.swift */; };
+		EE46488C245AD5F800103C7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE46488A245AD5F800103C7E /* Main.storyboard */; };
+		EE46488E245AD5FA00103C7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE46488D245AD5FA00103C7E /* Assets.xcassets */; };
+		EE464891245AD5FA00103C7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE46488F245AD5FA00103C7E /* LaunchScreen.storyboard */; };
+		EE46489C245AD5FA00103C7E /* WikiPediaSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46489B245AD5FA00103C7E /* WikiPediaSearchTests.swift */; };
+		EE4648A7245AD5FA00103C7E /* WikiPediaSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4648A6245AD5FA00103C7E /* WikiPediaSearchUITests.swift */; };
+		F2CA8F3167A615D4CA501EF6 /* Pods_WikiPediaSearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F6AC0A42B7049FBE23D2DB3 /* Pods_WikiPediaSearchTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE464898245AD5FA00103C7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE464879245AD5F800103C7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE464880245AD5F800103C7E;
+			remoteInfo = WikiPediaSearch;
+		};
+		EE4648A3245AD5FA00103C7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE464879245AD5F800103C7E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE464880245AD5F800103C7E;
+			remoteInfo = WikiPediaSearch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		093FBCC20EC5C0BE096BF868 /* Pods-WikiPediaSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WikiPediaSearch.release.xcconfig"; path = "Target Support Files/Pods-WikiPediaSearch/Pods-WikiPediaSearch.release.xcconfig"; sourceTree = "<group>"; };
+		174BF3E37AD26F0165B3C3BF /* Pods_WikiPediaSearch_WikiPediaSearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WikiPediaSearch_WikiPediaSearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BB87272B73E0AC334787E6E /* Pods-WikiPediaSearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WikiPediaSearchTests.release.xcconfig"; path = "Target Support Files/Pods-WikiPediaSearchTests/Pods-WikiPediaSearchTests.release.xcconfig"; sourceTree = "<group>"; };
+		3DB70B1C500CFD752C526FA0 /* Pods_WikiPediaSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WikiPediaSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4526CDD9EAB441F9DF262D07 /* Pods-WikiPediaSearch-WikiPediaSearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WikiPediaSearch-WikiPediaSearchUITests.debug.xcconfig"; path = "Target Support Files/Pods-WikiPediaSearch-WikiPediaSearchUITests/Pods-WikiPediaSearch-WikiPediaSearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		5F6AC0A42B7049FBE23D2DB3 /* Pods_WikiPediaSearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WikiPediaSearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75F00C295C823B8F9A31F955 /* Pods-WikiPediaSearch-WikiPediaSearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WikiPediaSearch-WikiPediaSearchUITests.release.xcconfig"; path = "Target Support Files/Pods-WikiPediaSearch-WikiPediaSearchUITests/Pods-WikiPediaSearch-WikiPediaSearchUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7654AD69954849B5FF9C274C /* Pods-WikiPediaSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WikiPediaSearch.debug.xcconfig"; path = "Target Support Files/Pods-WikiPediaSearch/Pods-WikiPediaSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		C0BCCDAC6A86008E6FCD6311 /* Pods-WikiPediaSearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WikiPediaSearchTests.debug.xcconfig"; path = "Target Support Files/Pods-WikiPediaSearchTests/Pods-WikiPediaSearchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE464881245AD5F800103C7E /* WikiPediaSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiPediaSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE464884245AD5F800103C7E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE464888245AD5F800103C7E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE46488B245AD5F800103C7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE46488D245AD5FA00103C7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE464890245AD5FA00103C7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE464892245AD5FA00103C7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE464897245AD5FA00103C7E /* WikiPediaSearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikiPediaSearchTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE46489B245AD5FA00103C7E /* WikiPediaSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiPediaSearchTests.swift; sourceTree = "<group>"; };
+		EE46489D245AD5FA00103C7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE4648A2245AD5FA00103C7E /* WikiPediaSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikiPediaSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE4648A6245AD5FA00103C7E /* WikiPediaSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiPediaSearchUITests.swift; sourceTree = "<group>"; };
+		EE4648A8245AD5FA00103C7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE46487E245AD5F800103C7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7763DF72243F3FC9342A2306 /* Pods_WikiPediaSearch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE464894245AD5FA00103C7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2CA8F3167A615D4CA501EF6 /* Pods_WikiPediaSearchTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE46489F245AD5FA00103C7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D27C4367ED31A4B5DD14E7CB /* Pods_WikiPediaSearch_WikiPediaSearchUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5067F96C07C4825628BCACBB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7654AD69954849B5FF9C274C /* Pods-WikiPediaSearch.debug.xcconfig */,
+				093FBCC20EC5C0BE096BF868 /* Pods-WikiPediaSearch.release.xcconfig */,
+				4526CDD9EAB441F9DF262D07 /* Pods-WikiPediaSearch-WikiPediaSearchUITests.debug.xcconfig */,
+				75F00C295C823B8F9A31F955 /* Pods-WikiPediaSearch-WikiPediaSearchUITests.release.xcconfig */,
+				C0BCCDAC6A86008E6FCD6311 /* Pods-WikiPediaSearchTests.debug.xcconfig */,
+				2BB87272B73E0AC334787E6E /* Pods-WikiPediaSearchTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6EA85E04052891FCCD902196 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DB70B1C500CFD752C526FA0 /* Pods_WikiPediaSearch.framework */,
+				174BF3E37AD26F0165B3C3BF /* Pods_WikiPediaSearch_WikiPediaSearchUITests.framework */,
+				5F6AC0A42B7049FBE23D2DB3 /* Pods_WikiPediaSearchTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE464878245AD5F800103C7E = {
+			isa = PBXGroup;
+			children = (
+				EE464883245AD5F800103C7E /* WikiPediaSearch */,
+				EE46489A245AD5FA00103C7E /* WikiPediaSearchTests */,
+				EE4648A5245AD5FA00103C7E /* WikiPediaSearchUITests */,
+				EE464882245AD5F800103C7E /* Products */,
+				5067F96C07C4825628BCACBB /* Pods */,
+				6EA85E04052891FCCD902196 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EE464882245AD5F800103C7E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE464881245AD5F800103C7E /* WikiPediaSearch.app */,
+				EE464897245AD5FA00103C7E /* WikiPediaSearchTests.xctest */,
+				EE4648A2245AD5FA00103C7E /* WikiPediaSearchUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE464883245AD5F800103C7E /* WikiPediaSearch */ = {
+			isa = PBXGroup;
+			children = (
+				EE464884245AD5F800103C7E /* AppDelegate.swift */,
+				EE464888245AD5F800103C7E /* ViewController.swift */,
+				EE46488A245AD5F800103C7E /* Main.storyboard */,
+				EE46488D245AD5FA00103C7E /* Assets.xcassets */,
+				EE46488F245AD5FA00103C7E /* LaunchScreen.storyboard */,
+				EE464892245AD5FA00103C7E /* Info.plist */,
+			);
+			path = WikiPediaSearch;
+			sourceTree = "<group>";
+		};
+		EE46489A245AD5FA00103C7E /* WikiPediaSearchTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE46489B245AD5FA00103C7E /* WikiPediaSearchTests.swift */,
+				EE46489D245AD5FA00103C7E /* Info.plist */,
+			);
+			path = WikiPediaSearchTests;
+			sourceTree = "<group>";
+		};
+		EE4648A5245AD5FA00103C7E /* WikiPediaSearchUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EE4648A6245AD5FA00103C7E /* WikiPediaSearchUITests.swift */,
+				EE4648A8245AD5FA00103C7E /* Info.plist */,
+			);
+			path = WikiPediaSearchUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE464880245AD5F800103C7E /* WikiPediaSearch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE4648AB245AD5FA00103C7E /* Build configuration list for PBXNativeTarget "WikiPediaSearch" */;
+			buildPhases = (
+				18BF7CC329FFD46A93139984 /* [CP] Check Pods Manifest.lock */,
+				EE46487D245AD5F800103C7E /* Sources */,
+				EE46487E245AD5F800103C7E /* Frameworks */,
+				EE46487F245AD5F800103C7E /* Resources */,
+				B0C2620A029DC22E06064D1E /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WikiPediaSearch;
+			productName = WikiPediaSearch;
+			productReference = EE464881245AD5F800103C7E /* WikiPediaSearch.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE464896245AD5FA00103C7E /* WikiPediaSearchTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE4648AE245AD5FA00103C7E /* Build configuration list for PBXNativeTarget "WikiPediaSearchTests" */;
+			buildPhases = (
+				D21FE52A2FB27039293D2C21 /* [CP] Check Pods Manifest.lock */,
+				EE464893245AD5FA00103C7E /* Sources */,
+				EE464894245AD5FA00103C7E /* Frameworks */,
+				EE464895245AD5FA00103C7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE464899245AD5FA00103C7E /* PBXTargetDependency */,
+			);
+			name = WikiPediaSearchTests;
+			productName = WikiPediaSearchTests;
+			productReference = EE464897245AD5FA00103C7E /* WikiPediaSearchTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EE4648A1245AD5FA00103C7E /* WikiPediaSearchUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE4648B1245AD5FA00103C7E /* Build configuration list for PBXNativeTarget "WikiPediaSearchUITests" */;
+			buildPhases = (
+				831830BA0984D6344ACD5A17 /* [CP] Check Pods Manifest.lock */,
+				EE46489E245AD5FA00103C7E /* Sources */,
+				EE46489F245AD5FA00103C7E /* Frameworks */,
+				EE4648A0245AD5FA00103C7E /* Resources */,
+				F33EAE81D3EE5C237EA8FA93 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE4648A4245AD5FA00103C7E /* PBXTargetDependency */,
+			);
+			name = WikiPediaSearchUITests;
+			productName = WikiPediaSearchUITests;
+			productReference = EE4648A2245AD5FA00103C7E /* WikiPediaSearchUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE464879245AD5F800103C7E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = Lyine;
+				TargetAttributes = {
+					EE464880245AD5F800103C7E = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					EE464896245AD5FA00103C7E = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = EE464880245AD5F800103C7E;
+					};
+					EE4648A1245AD5FA00103C7E = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = EE464880245AD5F800103C7E;
+					};
+				};
+			};
+			buildConfigurationList = EE46487C245AD5F800103C7E /* Build configuration list for PBXProject "WikiPediaSearch" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE464878245AD5F800103C7E;
+			productRefGroup = EE464882245AD5F800103C7E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE464880245AD5F800103C7E /* WikiPediaSearch */,
+				EE464896245AD5FA00103C7E /* WikiPediaSearchTests */,
+				EE4648A1245AD5FA00103C7E /* WikiPediaSearchUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE46487F245AD5F800103C7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE464891245AD5FA00103C7E /* LaunchScreen.storyboard in Resources */,
+				EE46488E245AD5FA00103C7E /* Assets.xcassets in Resources */,
+				EE46488C245AD5F800103C7E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE464895245AD5FA00103C7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE4648A0245AD5FA00103C7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18BF7CC329FFD46A93139984 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WikiPediaSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		831830BA0984D6344ACD5A17 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WikiPediaSearch-WikiPediaSearchUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0C2620A029DC22E06064D1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WikiPediaSearch/Pods-WikiPediaSearch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WikiPediaSearch/Pods-WikiPediaSearch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WikiPediaSearch/Pods-WikiPediaSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D21FE52A2FB27039293D2C21 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WikiPediaSearchTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F33EAE81D3EE5C237EA8FA93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WikiPediaSearch-WikiPediaSearchUITests/Pods-WikiPediaSearch-WikiPediaSearchUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WikiPediaSearch-WikiPediaSearchUITests/Pods-WikiPediaSearch-WikiPediaSearchUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WikiPediaSearch-WikiPediaSearchUITests/Pods-WikiPediaSearch-WikiPediaSearchUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE46487D245AD5F800103C7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE464889245AD5F800103C7E /* ViewController.swift in Sources */,
+				EE464885245AD5F800103C7E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE464893245AD5FA00103C7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE46489C245AD5FA00103C7E /* WikiPediaSearchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE46489E245AD5FA00103C7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE4648A7245AD5FA00103C7E /* WikiPediaSearchUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE464899245AD5FA00103C7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE464880245AD5F800103C7E /* WikiPediaSearch */;
+			targetProxy = EE464898245AD5FA00103C7E /* PBXContainerItemProxy */;
+		};
+		EE4648A4245AD5FA00103C7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE464880245AD5F800103C7E /* WikiPediaSearch */;
+			targetProxy = EE4648A3245AD5FA00103C7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE46488A245AD5F800103C7E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE46488B245AD5F800103C7E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE46488F245AD5FA00103C7E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE464890245AD5FA00103C7E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE4648A9245AD5FA00103C7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE4648AA245AD5FA00103C7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE4648AC245AD5FA00103C7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7654AD69954849B5FF9C274C /* Pods-WikiPediaSearch.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WikiPediaSearch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.linne.WikiPediaSearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE4648AD245AD5FA00103C7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 093FBCC20EC5C0BE096BF868 /* Pods-WikiPediaSearch.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WikiPediaSearch/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.linne.WikiPediaSearch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE4648AF245AD5FA00103C7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0BCCDAC6A86008E6FCD6311 /* Pods-WikiPediaSearchTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WikiPediaSearchTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.linne.WikiPediaSearchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WikiPediaSearch.app/WikiPediaSearch";
+			};
+			name = Debug;
+		};
+		EE4648B0245AD5FA00103C7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BB87272B73E0AC334787E6E /* Pods-WikiPediaSearchTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WikiPediaSearchTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.linne.WikiPediaSearchTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WikiPediaSearch.app/WikiPediaSearch";
+			};
+			name = Release;
+		};
+		EE4648B2245AD5FA00103C7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4526CDD9EAB441F9DF262D07 /* Pods-WikiPediaSearch-WikiPediaSearchUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WikiPediaSearchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.linne.WikiPediaSearchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WikiPediaSearch;
+			};
+			name = Debug;
+		};
+		EE4648B3245AD5FA00103C7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75F00C295C823B8F9A31F955 /* Pods-WikiPediaSearch-WikiPediaSearchUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = WikiPediaSearchUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.linne.WikiPediaSearchUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WikiPediaSearch;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE46487C245AD5F800103C7E /* Build configuration list for PBXProject "WikiPediaSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4648A9245AD5FA00103C7E /* Debug */,
+				EE4648AA245AD5FA00103C7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE4648AB245AD5FA00103C7E /* Build configuration list for PBXNativeTarget "WikiPediaSearch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4648AC245AD5FA00103C7E /* Debug */,
+				EE4648AD245AD5FA00103C7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE4648AE245AD5FA00103C7E /* Build configuration list for PBXNativeTarget "WikiPediaSearchTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4648AF245AD5FA00103C7E /* Debug */,
+				EE4648B0245AD5FA00103C7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE4648B1245AD5FA00103C7E /* Build configuration list for PBXNativeTarget "WikiPediaSearchUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE4648B2245AD5FA00103C7E /* Debug */,
+				EE4648B3245AD5FA00103C7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE464879245AD5F800103C7E /* Project object */;
+}
