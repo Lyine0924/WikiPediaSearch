@@ -15,7 +15,9 @@ class APIClient {
 
     private func get<T:Codable>(apiRequest: APIRequest) -> Observable<T> {
         return Observable<T>.create { observer in
-            let request = apiRequest.request()
+            guard let request = apiRequest.request() else {
+                return Disposables.create()
+            }
 
             let dataRequest = AF.request(request).responseData { response in
                 switch response.result {
@@ -48,6 +50,7 @@ class APIClient {
             
             let observable: Observable<WikipediaResponses> = self.get(apiRequest: apiRequest)
 
+            // 그닥 맘에 들지 않는 코드라 수정이 필요할 듯 합네다!
             observable.subscribe(onNext: {
                 $0.title.map {
                     titles.append($0)

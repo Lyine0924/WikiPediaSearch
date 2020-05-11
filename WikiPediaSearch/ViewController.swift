@@ -54,9 +54,9 @@ class ViewController: UIViewController {
     }
 
     private func bindUI() {
-        searchController.searchBar.rx.text.asObservable()
-            .filter { $0?.isEmpty == false }
-            .map { ($0 ?? "").lowercased() }
+        searchController.searchBar.rx.text.orEmpty.asObservable()
+//            .filter { $0?.isEmpty == false }
+            .map { ($0 ?? "").lowercased().replacingOccurrences(of: " ", with: "_") }
             .map { WikipediaRequest(word: $0) }
             .flatMap { request -> Observable<[searchResult]> in
                 return self.apiClient.search(apiRequest: request)

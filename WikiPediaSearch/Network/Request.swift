@@ -19,8 +19,12 @@ protocol APIRequest {
 }
 
 extension APIRequest {
-    func request() -> URLRequest {
-        let url = URL(string: baseURL + parameter)!
+    func request() -> URLRequest? {
+        let urlString = baseURL + parameter
+        guard let url = URL(string: urlString) else {
+            print("url init failed..")
+            return nil
+        }
         var request = URLRequest(url: url)
         let urlComponents = NSURLComponents(url: url, resolvingAgainstBaseURL: true)!
 
