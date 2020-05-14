@@ -55,9 +55,11 @@ class ViewController: UIViewController {
 
     private func bindUI() {
         searchController.searchBar.rx.text.orEmpty.asObservable()
+            .throttle(.microseconds(300), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
             .map { ($0 ?? "").lowercased().replacingOccurrences(of: " ", with: "_") }
             .map { WikipediaRequest(word: $0) }
-            .flatMap { request -> Observable<[searchResult]> in
+            .flatMapLatest { request -> Observable<[searchResult]> in
                 return self.apiClient.search(apiRequest: request)
             }
             .bind(to: tableView.rx.items(cellIdentifier: cellIdentifier)) { index, model, cell in
