@@ -5,8 +5,9 @@ target 'WikiPediaSearch' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   # Pods for WikiPediaSearch
-  pod 'RxSwift'
-  pod 'RxCocoa'
+  pod 'RxViewBinder', '~> 2.0.0'
+  pod 'RxDataSources', '~> 4.0'
+  pod 'SnapKit'
   pod 'Alamofire'
 
   target 'WikiPediaSearchTests' do
