@@ -32,8 +32,11 @@ class MVVMViewController: UIViewController {
         return searchController
     }()
     
-    private let dataSource = RxTableViewSectionedReloadDataSource<TableCellSection>(configureCell: { dataSource, tableView, indexPath, viewModel in
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: Cell.identifier, for: indexPath) as? TableViewCell else { fatalError() }
+    private let dataSource = RxTableViewSectionedReloadDataSource<TableCellSection>(configureCell:
+    { (dataSource, tableView, indexPath, viewModel) in
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Cell.identifier, for: indexPath)
+            as? TableViewCell
+        else { fatalError() }
         cell.viewModel = viewModel
         return cell
     })
@@ -128,7 +131,9 @@ class MVVMViewController: UIViewController {
             .disposed(by: disposeBag)
         
         self.viewModel.output.isLoading
-            .drive(onNext: { [weak self] in $0 ? self?.indicator?.startAnimating() : self?.indicator?.stopAnimating() })
+            .drive(onNext: { [weak self] in
+                $0 ? self?.indicator?.startAnimating() : self?.indicator?.stopAnimating()
+            })
             .disposed(by: self.disposeBag)
         
         self.viewModel.output.response

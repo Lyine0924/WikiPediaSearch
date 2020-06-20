@@ -74,7 +74,7 @@ class ViewController: UIViewController {
             .flatMapLatest { request -> Observable<[searchResult]> in
                 return self.apiClient.search(apiRequest: request)
             }
-            .bind(to: tableView.rx.items(cellIdentifier: cellIdentifier)) { index, model, cell in
+            .bind(to: tableView.rx.items(cellIdentifier: cellIdentifier)) { (index, model, cell) in
                 cell.textLabel?.text = model.title
                 cell.textLabel?.adjustsFontSizeToFitWidth = true
             }
