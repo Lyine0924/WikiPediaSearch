@@ -7,14 +7,22 @@
 //
 
 import UIKit
+
 import RxSwift
 import RxCocoa
+import RxDataSources
+import SnapKit
 import SafariServices
 
 class ViewController: UIViewController {
     
+    enum Cell: String {
+        case identifier = "cellIdentifier"
+    }
+    
     private let tableView = UITableView()
-    private let cellIdentifier = "cellIdentifier"
+    private let cellIdentifier = Cell.identifier.rawValue
+    
     private let apiClient = APIClient()
     
     private var searchController: UISearchController = {
@@ -42,19 +50,23 @@ class ViewController: UIViewController {
     }
 
     private func configureLayout() {
-        tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor),
-            tableView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        tableView.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview()
+        }
+        
+        
         tableView.contentInset.bottom = view.safeAreaInsets.bottom
     }
 
     private func bindUI() {
-        searchController.searchBar.rx.text.orEmpty.asObservable()
+        searchController.searchBar.rx.text.orEmpty
+            .asObservable()
             .throttle(.microseconds(300), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .map { ($0 ?? "").lowercased().replacingOccurrences(of: " ", with: "_") }

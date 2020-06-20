@@ -7,12 +7,19 @@
 //
 
 import XCTest
+import RxSwift
+import RxDataSources
 @testable import WikiPediaSearch
 
 class WikiPediaSearchTests: XCTestCase {
+    
+    var viewModel: MainViewModelType?
+    var request: APIRequest?
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        viewModel = MainViewModel()
+        request = WikipediaRequest.init(word: "hi")
     }
 
     override func tearDownWithError() throws {
@@ -22,6 +29,16 @@ class WikiPediaSearchTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        if let request = request {
+            viewModel?.input.fetchData(request: request)
+        }
+        
+        viewModel?
+            .output
+            .response
+            .asObservable()
+            .subscribe {
+            }
     }
 
     func testPerformanceExample() throws {
