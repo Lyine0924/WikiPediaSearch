@@ -14,8 +14,7 @@ import RxViewBinder
 
 class MainViewBindable: ViewBindable {
     enum Command {
-        case fetch
-        case search(APIRequest)
+        case fetch(APIRequest)
     }
     
     struct Action {
@@ -48,40 +47,50 @@ class MainViewBindable: ViewBindable {
     
     func binding(command: Command) {
         switch command {
-        case .fetch:
-            var request:APIRequest?
-            
-            let observer = self.action._request
-                .asObservable()
-                .compactMap { $0 }
-                .subscribe(onNext: {
-                    request = $0
-                })
-                .disposed(by: disposeBag)
-            
-            guard let api = request, !api.parameter.isEmpty else {
-                return
-            }
-            
-            let result = self.service.search(apiRequest: api)
-            
-            self.action._isLoading.accept(true)
-
-            result.asObservable()
-                .catchError({ error in
-                    self.action._error.accept(error.localizedDescription)
-                    return .empty()
-                })
-                .map { $0.map { TableCellViewModel($0) } }
-                .map { ([TableCellSection(model: Void(), items: $0)]) }
-                .do(onCompleted: { [weak self] in self?.action._isLoading.accept(false) })
-                .bind(to: self.action._response)
-                .disposed(by: disposeBag)
-        case .search(let word):
-            self.action._request.accept(word)
-            binding(command: .fetch)
+        case .fetch(let word):
+            search(word: word)
         }
     }
     
+    private func search(word: APIRequest) {
+        self.action._request.accept(word)
+        
+        self.action._request
+            .asObservable()
+            .compactMap { $0 }
+            .subscribe(onNext: { [weak self] request in
+                self?.bindingSearchResult(request: request)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func startLoading() {
+        action._isLoading.accept(true)
+    }
+    
+    private func stopLoading() {
+        action._isLoading.accept(false)
+    }
+    
+    private func bindingSearchResult(request: APIRequest?) {
+        guard let api = request, !api.parameter.isEmpty else {
+            return
+        }
+        
+        startLoading()
+        
+        let result = self.service.search(apiRequest: api)
+
+        result.asObservable()
+            .catchError({ error in
+                self.action._error.accept(error.localizedDescription)
+                return .empty()
+            })
+            .map { $0.map { TableCellViewModel($0) } }
+            .map { ([TableCellSection(model: Void(), items: $0)]) }
+            .do(onCompleted: { [weak self] in self?.stopLoading() })
+            .bind(to: self.action._response)
+            .disposed(by: disposeBag)
+    }
 }
 

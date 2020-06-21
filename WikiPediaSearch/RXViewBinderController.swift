@@ -133,12 +133,12 @@ class RXViewBinderController: UIViewController, BindView {
             .throttle(.microseconds(300), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .map { ($0 ?? "").lowercased().replacingOccurrences(of: " ", with: "_") }
-            .map { MainViewBindable.Command.search(WikipediaRequest(word: $0))}
+            .map { MainViewBindable.Command.fetch(WikipediaRequest(word: $0))}
             .bind(to: viewBinder.command)
             .disposed(by: disposeBag)
 
         self.rx.methodInvoked(#selector(UIViewController.viewDidLoad))
-            .map { _ in ViewBinder.Command.fetch }
+            .map { _ in ViewBinder.Command.fetch(WikipediaRequest(word: "")) }
             .bind(to: viewBinder.command)
             .disposed(by: disposeBag)
         
