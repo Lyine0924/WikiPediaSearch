@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func initWindow() {
         let window = UIWindow(frame: UIScreen.main.bounds)
         self.window = window
-        self.window?.rootViewController = UINavigationController(rootViewController: MVVMViewController())
+//        self.window?.rootViewController = UINavigationController(rootViewController: MVVMViewController())
+        self.window?.rootViewController = UINavigationController(rootViewController: RXViewBinderController())
         self.window?.makeKeyAndVisible()
     }
 }
