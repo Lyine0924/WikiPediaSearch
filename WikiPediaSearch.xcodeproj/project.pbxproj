@@ -17,6 +17,7 @@
 		EE464891245AD5FA00103C7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE46488F245AD5FA00103C7E /* LaunchScreen.storyboard */; };
 		EE46489C245AD5FA00103C7E /* WikiPediaSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE46489B245AD5FA00103C7E /* WikiPediaSearchTests.swift */; };
 		EE4648A7245AD5FA00103C7E /* WikiPediaSearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4648A6245AD5FA00103C7E /* WikiPediaSearchUITests.swift */; };
+		EE61A8B2249F1336004E85B8 /* RXViewBinderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE61A8B1249F1336004E85B8 /* RXViewBinderController.swift */; };
 		EE8CB3CC2467D24700CBC5FF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8CB3CB2467D24700CBC5FF /* TableViewCell.swift */; };
 		EE8CB3CF2467D36400CBC5FF /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8CB3CE2467D36400CBC5FF /* Request.swift */; };
 		EE8CB3D12467DB9200CBC5FF /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE8CB3D02467DB9200CBC5FF /* Response.swift */; };
@@ -67,6 +68,7 @@
 		EE4648A2245AD5FA00103C7E /* WikiPediaSearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikiPediaSearchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE4648A6245AD5FA00103C7E /* WikiPediaSearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiPediaSearchUITests.swift; sourceTree = "<group>"; };
 		EE4648A8245AD5FA00103C7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE61A8B1249F1336004E85B8 /* RXViewBinderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXViewBinderController.swift; sourceTree = "<group>"; };
 		EE8CB3CB2467D24700CBC5FF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		EE8CB3CE2467D36400CBC5FF /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		EE8CB3D02467DB9200CBC5FF /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				EE8FA60B2494DD4400206B70 /* TableCellViewModel.swift */,
 				EE1FF099249DF93D00021186 /* MainViewBindable.swift */,
 				EE1FF09B249DFF0800021186 /* MVVMViewController.swift */,
+				EE61A8B1249F1336004E85B8 /* RXViewBinderController.swift */,
 			);
 			path = WikiPediaSearch;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				EE8CB3D32467DBC600CBC5FF /* APIClient.swift in Sources */,
 				EE1FF09A249DF93D00021186 /* MainViewBindable.swift in Sources */,
 				EE8FA60C2494DD4400206B70 /* TableCellViewModel.swift in Sources */,
+				EE61A8B2249F1336004E85B8 /* RXViewBinderController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
