@@ -89,7 +89,7 @@ class RXViewBinderController: UIViewController, BindView {
     }
 
     override func viewDidLoad() {
-//        super.viewDidLoad()
+        super.viewDidLoad()
         configureProperties()
         // Do any additional setup after loading the view.
     }
@@ -133,8 +133,7 @@ class RXViewBinderController: UIViewController, BindView {
             .throttle(.microseconds(300), scheduler: MainScheduler.instance)
             .distinctUntilChanged()
             .map { ($0 ?? "").lowercased().replacingOccurrences(of: " ", with: "_") }
-            .map { viewBinder.bindRequest(request: WikipediaRequest(word: $0)) }
-            .map { _ in MainViewBindable.Command.fetch}
+            .map { MainViewBindable.Command.search(WikipediaRequest(word: $0))}
             .bind(to: viewBinder.command)
             .disposed(by: disposeBag)
 

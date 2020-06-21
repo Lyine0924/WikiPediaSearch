@@ -15,9 +15,11 @@ import RxViewBinder
 class MainViewBindable: ViewBindable {
     enum Command {
         case fetch
+        case search(APIRequest)
     }
     
     struct Action {
+        var _request:BehaviorRelay<APIRequest> = .init(value: WikipediaRequest.init(word: ""))
         var _response:BehaviorRelay<[TableCellSection]> = .init(value:[])
         var _isLoading:BehaviorRelay<Bool> = .init(value: false)
         let _error: BehaviorRelay<String?> = BehaviorRelay(value: nil)
@@ -37,7 +39,6 @@ class MainViewBindable: ViewBindable {
     
     let action: Action
     lazy var state =  State(action: self.action)
-    private var request: APIRequest?
     let service: APIClient
     
     init(service: APIClient = APIClient()) {
@@ -45,17 +46,26 @@ class MainViewBindable: ViewBindable {
         self.action = Action()
     }
     
-    func bindRequest(request: APIRequest?) {
-        self.request = request
-    }
-    
     func binding(command: Command) {
         switch command {
         case .fetch:
-            guard let request = self.request, !request.parameter.isEmpty else { return }
+            var request:APIRequest?
+            
+            let observer = self.action._request
+                .asObservable()
+                .compactMap { $0 }
+                .subscribe(onNext: {
+                    request = $0
+                })
+                .disposed(by: disposeBag)
+            
+            guard let api = request, !api.parameter.isEmpty else {
+                return
+            }
+            
+            let result = self.service.search(apiRequest: api)
             
             self.action._isLoading.accept(true)
-            let result = service.search(apiRequest: request)
 
             result.asObservable()
                 .catchError({ error in
@@ -67,7 +77,11 @@ class MainViewBindable: ViewBindable {
                 .do(onCompleted: { [weak self] in self?.action._isLoading.accept(false) })
                 .bind(to: self.action._response)
                 .disposed(by: disposeBag)
+        case .search(let word):
+            self.action._request.accept(word)
+            binding(command: .fetch)
         }
     }
+    
 }
 
